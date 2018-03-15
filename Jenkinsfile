@@ -67,7 +67,6 @@ try {
 
             echo "Tests :: END"
        	}
-
         stage ('Deployment') {
             echo "Deployment :: START"
           //Provision access for AWS IAM role with RT Cross Account credentials file.
