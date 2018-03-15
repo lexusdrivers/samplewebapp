@@ -68,6 +68,18 @@ try {
             echo "Tests :: END"
        	}
 
+        stage ('Deployment') {
+            echo "Deployment :: START"
+          //Provision access for AWS IAM role with RT Cross Account credentials file.
+            //sh "/build/obtain-cross-account-credentials.sh ${AWS_RT_IAM_CROSS_ACCOUNT}"
+      // NTUC sh "/build/obtain-cross-account-credentials.sh ${AWS_RT_IAM_CROSS_ACCOUNT_CONFIG_DT}"
+
+            //Unit Tests need access to AWS Elastic Search.
+            sh "./buildenv/jenkins-deployment.sh"
+
+            echo "Deployment :: END"
+        }
+
     }
 }
 catch (err) {
