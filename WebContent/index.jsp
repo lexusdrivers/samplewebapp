@@ -14,7 +14,7 @@ body {
 				Welcome to the world of CI / CD<br> <br>
 			</h2>
 			<h3>
-				<form action = "/welcome">
+				<form action = "welcome.html">
 					Name : <input type="Text" name="name"/> </br>
 					<input type="Submit"/>
 				</form>
