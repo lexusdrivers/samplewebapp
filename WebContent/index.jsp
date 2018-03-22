@@ -16,8 +16,7 @@ body {
 			<h3>
 				<form action = "welcome.html">
 					Name : <input type="Text" name="name"/> </br>
-					<input type="Submit"/>
-				</form>
+					<input type="Submit" name="submit"/>
 				</form>
 			</h3>
 		</div>
