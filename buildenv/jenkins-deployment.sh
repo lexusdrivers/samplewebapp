@@ -24,9 +24,9 @@ ls -ltr
 source servercred.env
 rm servercred.env
 
-curl  "http://$TOMCAT_USERNAME:$TOMCAT_PASSWORD@ec2-34-214-126-199.us-west-2.compute.amazonaws.com:8090/manager/text/undeploy?path=/HelloWorld"
+#curl  "http://$TOMCAT_USERNAME:$TOMCAT_PASSWORD@http://ec2-35-161-134-196.us-west-2.compute.amazonaws.com:8090/manager/text/undeploy?path=/HelloWorld"
 
-curl -T HelloWorld.war "http://$TOMCAT_USERNAME:$TOMCAT_PASSWORD@ec2-34-214-126-199.us-west-2.compute.amazonaws.com:8090/manager/text/deploy?path=/HelloWorld&update=true"
+curl -T HelloWorld.war "http://$TOMCAT_USERNAME:$TOMCAT_PASSWORD@ec2-35-161-134-196.us-west-2.compute.amazonaws.com:8090/manager/text/deploy?path=/HelloWorld&update=true"
 
 # Copy the compiled resources to the shared EFS directory, for
 # consumption by other jobs
